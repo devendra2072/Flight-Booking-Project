@@ -1,27 +1,38 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flight Bookling</title>
-    <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
-</head>
-<body>
-    <div>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <div class="p-container">
+      <div class="p-header">
         <header>
-
+            <ul class="logo">
+                <a href="#"><img src="{% static 'img/logoo.avif' %}" alt="" height="38px" width="155px"></a>
+                <a href="#"><img src="" alt=""></a>
+                <a href="#"></a>
+                <a href="#"></a>                
+            </ul>
         </header>
         <nav>
-
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Flights</a></li>
+            <li><a href="#">Bookings</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
         </nav>
-        
-    {% block content %}
-    
-    {% endblock %}
-        <footer>
-
-        </footer>
-    </div>    
-</body>
+      </div>
+      {% block content %} {% endblock %}
+      <footer>
+        <div class="footer-content">
+          <p>&copy; 2023 Flight Booking. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
