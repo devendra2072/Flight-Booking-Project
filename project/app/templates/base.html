@@ -7,31 +7,61 @@
     <title>Flight Bookling</title>
     <link rel="stylesheet" href="{% static "css/style.css" %}" />
     <style>
-        h1 {
-            color: red;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
+       .p-header{
+        background-image: url("{% static 'img/bg1.jpg' %}");
+        background-size: cover;
+        height:10%%;
+        min-width: 1200px;
+        align-items: center;
+        padding: 20px;
+        background-color: #f8f8f8;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+       }
+       header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        position: absolute;
+        top: -10px;
+       }
+       .nav-links{
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+      
+        margin-top: 0
+        0px;
+      }
+      a{
+        text-decoration-line: none;
+        color: #fff;
+       }
     </style>
   </head>
   <body>
     <div class="p-container">
       <div class="p-header">
         <header>
-            <ul class="logo">
-                <h1>hello</h1>
-                <a href="#"><img src="{% static 'img/logoo.avif' %}" alt="logo" height="38px" width="155px"></a>
-                <a href="#"><img src="{% static 'img/bg2.webp' %}" alt="img" height="38px" width="155px"></a>
+            <ul class="logo" type="none">
+
+                <a href="#"><img src="{% static 'img/logoo.avif' %}" alt="logo" height="48px" width="145px"></a>
+                <a href="#"><img src="{% static 'img/bg2.webp' %}" alt="img" height="48px" width="145px"></a>
                 <a href="#"></a>
                 <a href="#"></a>                
             </ul>
         </header>
         <nav>
-          <ul class="nav-links">
+          <ul class="nav-links" type="none">
             <li><a href="#">Home</a></li>
             <li><a href="#">Flights</a></li>
             <li><a href="#">Bookings</a></li>
             <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="{% url 'userlogin' %}">Login</a></li>
+            <li><a href="#">Register</a></li>
           </ul>
         </nav>
       </div>
